@@ -1,5 +1,5 @@
 
-export const haversineDistance=(
+export  const haversineDistance=(
     coord1: { latitude: number; longitude: number },
     coord2: { latitude: number; longitude: number}):number=>{
         const R = 6371;

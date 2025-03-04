@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import express,{ Express, Request,Response } from "express";
-import { ILoja } from "./modules/interfaces";
-import  {GetViaCep} from "./Service/GetViaCep";
+import  {GetViaCep} from "./Service/GetViaCep.ts";
+import Loja from "./modules/Lojas";
+import router from "./index.ts";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ export const app: Express = express();
 
 app.use(express.json());
 
+app.use('/api', router);
 
   if (!process.env.DATABASE) {
      throw new Error("A variável de ambiente DATABASE não está definida!");
@@ -26,34 +28,25 @@ app.use(express.json());
       console.log('DB conectado com sucesso');
   })
 
-const LojasSchema = new mongoose.Schema({
-    id:Number,
-    name:{
-     type: String,
-     require:true
-    },
-    cep:{
-    type: String,
-    require:true
-    },
-    lat: { type: Number },
-    lon: { type: Number },
- })
- 
- const Loja = mongoose.model<ILoja>('Loja', LojasSchema);
+
 
  app.post('/lojas', async (req: Request, res: Response) => {
-    const { id, name, cep } = req.body;
+    const { name, cep, city,bairro,logradouro,estado,ddd} = req.body;
   
+
     try {
       const coordinates = await GetViaCep(cep);
       if (coordinates) {
         const loja = new Loja({
-          id,
           name,
           cep,
-          lat: coordinates.lat,
-          lon: coordinates.lon,
+          city,
+          bairro,
+         logradouro,
+          estado,
+          ddd,
+          latitude: coordinates.lat,
+          longitude: coordinates.lon,
         });
   
         const result = await loja.save();

@@ -16,11 +16,3 @@ export interface location {
     lat: number;
     lon: number;
 }
-
-export interface ILoja {
-    id: number;
-    name: string;
-    cep: string;
-    latitude?: number;
-    longitude?: number;
-  }

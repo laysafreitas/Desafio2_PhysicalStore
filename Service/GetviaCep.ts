@@ -2,6 +2,7 @@ import axios from "axios";
 import { ViacepResponse } from "../modules/interfaces";
 import { location } from "../modules/interfaces";
 
+
 export async function GetViaCep(cep: string): Promise<location | null> {
 try{
 const response = await axios.get<ViacepResponse>(`http://viacep.com.br/ws/${cep}/json/`);
@@ -11,7 +12,7 @@ if(response.data.erro){
     return null;
 }
 
-const address = `${response.data.localidade}, ${response.data.uf}, Brasil`;
+const address = `${response.data.logradouro},${response.data.localidade}, ${response.data.uf}`;
 
 const NominatimResponse = await axios.get<location>(`https://nominatim.openstreetmap.org/search`,{
      params: { q: address, format: "json",limit:1},
@@ -37,3 +38,5 @@ return {
     return null;
 }
 }
+
+
