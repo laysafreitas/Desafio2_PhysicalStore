@@ -11,8 +11,11 @@ Esse conceito contrasta com lojas online, que operam exclusivamente na internet.
 
 Tecnologias:typescrip;
 Desenvolvimento de rotas: Poderá ser usado o Express;
+
 Banco de dados:mongoDB;
+
 O Básico e simples do TS utilizado:
+
 .express;
 .axios;
 .winston(para logging);
