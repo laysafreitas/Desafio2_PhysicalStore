@@ -2,6 +2,7 @@ import { GetViaCep } from "./GetViaCep";
 import { Request,Response } from "express";
 import {haversineDistance} from "../modules/haversineDistance"
 import Loja from "../modules/Lojas";
+import  {logger}  from "../app.ts";
 
 export async function GetLocation(
     req:Request,
@@ -11,6 +12,7 @@ export async function GetLocation(
 
     if (!cep) {
       res.status(400).json({ message: 'CEP é obrigatório' });
+      logger.error('CEP é obrigatório');
       return;
     }
 try{
@@ -18,7 +20,8 @@ try{
 const coordinates = await GetViaCep(cep);
 
 if (!coordinates) {
-    res.status(404).json({ message: 'CEP não encontrado' })
+    res.status(404).json({ message: 'CEP não encontrado' });
+    logger.error('CEP não encontrado', { cep });
     return;
   }
 
@@ -46,12 +49,15 @@ coordinates;
 
     if (storesWithinRadius.length === 0) {
         res.status(404).json({ message: 'Nenhuma loja encontrada no raio de 100 km' });
+        logger.info('Nenhuma loja encontrada no raio de 100 km', { cep });
         return;
       }
   
       res.json(storesWithinRadius);
+      logger.info('Lojas encontradas', { stores: storesWithinRadius });
 }catch(error: any){
-    console.error(error);
+     console.error(error);
+    logger.error('Erro ao processar a requisição', { error: error.message });
     res.status(500).json({ message: 'Erro ao processar a requisição', error: error.message});
 }
 }
