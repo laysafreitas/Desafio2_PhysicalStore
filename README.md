@@ -59,6 +59,7 @@ POST /lojas - Adiciona uma nova loja
 GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
 
 #📄 Licença
+
 Este projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e modificá-lo conforme necessário.
 
 
