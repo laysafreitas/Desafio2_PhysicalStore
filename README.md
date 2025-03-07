@@ -29,6 +29,8 @@ O Básico e simples do TS utilizado:
 
 .Dotenv (para variáveis de ambiente);
 
+.Mongoose
+
 #Regras da Aplicação:
 
 O projeto é a criação de um Physical Store que irá conter as lojas de uma determinada loja eCommerce.
