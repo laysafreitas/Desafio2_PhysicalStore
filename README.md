@@ -10,6 +10,7 @@ Esse conceito contrasta com lojas online, que operam exclusivamente na internet.
 #📦Requisitos do Sistema
 
 Tecnologias:typescrip;
+
 Desenvolvimento de rotas: Poderá ser usado o Express;
 
 Banco de dados:mongoDB;
@@ -17,10 +18,15 @@ Banco de dados:mongoDB;
 O Básico e simples do TS utilizado:
 
 .express;
+
 .axios;
+
 .winston(para logging);
+
 .ts-node;
+
 .@types/express;
+
 .Dotenv (para variáveis de ambiente);
 
 #Regras da Aplicação:
@@ -61,6 +67,7 @@ npm start
 #📌 Endpoints Principais
 
 POST /lojas - Adiciona uma nova loja
+
 GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
 
 #📄 Licença
