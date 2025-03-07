@@ -45,7 +45,9 @@ npm install
 Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
 
 DATABASE=mongodb://seu-banco-de-dados
+
 DATABASE_LOCAL=PORT=3000
+
 DATABASE_SENHA=sua senha
 
 #▶️Uso
