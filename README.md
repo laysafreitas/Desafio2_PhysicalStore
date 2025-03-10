@@ -66,7 +66,8 @@ npm start
 #⚙️Configuração
 
 - Antes de iniciar a aplicação, certifique-se de configurar as variáveis de ambiente corretamente.
-Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
+  
+- Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
 
 DATABASE=mongodb://seu-banco-de-dados
 
@@ -92,9 +93,10 @@ npm start
 }
 
 - GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
+  
 Parâmetros:
+- cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
 
-.cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
 exemplo de resposta:
 
 {
