@@ -98,8 +98,19 @@ Parâmetros:
 - cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
 
 exemplo de resposta:
+{
+    "_id": "67c74c193ba0364459c393c6",
+    "name": "drogasil",
+    "cep": "52070-571",
+    "city": "recife",
+    "bairro": "casa amarela",
+    "estado": "PE",
+    "ddd": "81",
+    "latitude": -8.022013203133227,
+    "longitude": -34.922386513770135,
+    "__v": 0
+}
 
-<script src="https://gist.github.com/laysafreitas/1ca8d5cc51b21b74e971a13dc579dbfb.js"></script>
 
 _______________________________________________________________________________________________________________________________________________________________________________________________________________
 
