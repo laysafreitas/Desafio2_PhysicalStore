@@ -8,9 +8,10 @@ a distancia e rotas entre o endereço do usuario e as lojas cadastradas;
 
 #Principais Funcionalidades
 
-.Cálculo da loja mais próxima com base no CEP do usuário;
-.Suporte a falhas com método alternativo de cálculo de distância (Haversine);
-.Retorno da loja mais próxima e outras lojas dentro de um raio de 100km
+-Cálculo da loja mais próxima com base no CEP do usuário;
+-Suporte a falhas com método alternativo de cálculo de distância (Haversine);
+-Retorno da loja mais próxima e outras lojas dentro de um raio de 100km
+
 
 #📦Requisitos do Sistema
 
