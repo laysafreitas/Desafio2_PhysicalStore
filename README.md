@@ -1,11 +1,16 @@
 DESAFIO 02 – Desenvolvendo uma Physical Store
 
-#o que seria?
+#Visão geral:
 
-È um estabelecimento comercial que tem um endereço físico onde os clientes podem visitar,
-ver produtos pessoalmente, 
-experimentar itens e fazer compras diretamente no local.
-Esse conceito contrasta com lojas online, que operam exclusivamente na internet.
+Physical Store é uma aplicação usando express, desenvolvida em typescript que permite encontrar lojas
+fisicas com um CEP determinado.A API utiliza multiplos serviços de geolocalização para calcular com precisão
+a distancia e rotas entre o endereço do usuario e as lojas cadastradas;
+
+#Principais Funcionalidades
+
+.Cálculo da loja mais próxima com base no CEP do usuário;
+.Suporte a falhas com método alternativo de cálculo de distância (Haversine);
+.Retorno da loja mais próxima e outras lojas dentro de um raio de 100km
 
 #📦Requisitos do Sistema
 
@@ -51,15 +56,15 @@ O projeto é a criação de um Physical Store que irá conter as lojas de uma de
 3- Instale as dependências:
 npm install
 
-#⚙️Configuração
+-compile o projeto:
+npm start
 
+#⚙️Configuração
+-Antes de iniciar a aplicação, certifique-se de configurar as variáveis de ambiente corretamente.
 Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
 
 DATABASE=mongodb://seu-banco-de-dados
 
-DATABASE_LOCAL=PORT=3000
-
-DATABASE_SENHA=sua senha
 
 #▶️Uso
 
@@ -68,12 +73,39 @@ npm start
 
 #📌 Endpoints Principais
 
-POST /lojas - Adiciona uma nova loja
+POST /lojas - Adiciona uma nova loja:
+
+{
+ "name": string
+ "cep": string
+ "city": string
+ "bairro": string
+ "logradouro": string
+ "estado": string
+ "ddd": string
+}
 
 GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
+Parâmetros:
 
-#📄 Licença
+.cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
+exemplo de resposta:
 
-Este projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e modificá-lo conforme necessário.
+{
+        "_id": "67c74c193ba0364459c393c6",
+        "name": "drogasil",
+        "cep": "52070-571",
+        "city": "recife",
+        "bairro": "casa amarela",
+        "estado": "PE",
+        "ddd": "81",
+        "latitude": -8.022013203133227,
+        "longitude": -34.922386513770135,
+        "__v": 0
+    },
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Desenvolvida por @laysafreitas
 
 
