@@ -60,7 +60,7 @@ O projeto é a criação de um Physical Store que irá conter as lojas de uma de
 3- Instale as dependências:
 npm install
 
--compile o projeto:
+4- compile o projeto:
 npm start
 
 #⚙️Configuração
@@ -79,7 +79,7 @@ npm start
 
 #📌 Endpoints Principais
 
-POST /lojas - Adiciona uma nova loja:
+- POST /lojas - Adiciona uma nova loja:
 
 {
  "name": string
@@ -91,7 +91,7 @@ POST /lojas - Adiciona uma nova loja:
  "ddd": string
 }
 
-GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
+- GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
 Parâmetros:
 
 .cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
