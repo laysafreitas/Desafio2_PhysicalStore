@@ -60,6 +60,7 @@ npm install
 npm start
 
 #⚙️Configuração
+
 -Antes de iniciar a aplicação, certifique-se de configurar as variáveis de ambiente corretamente.
 Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
 
@@ -69,6 +70,7 @@ DATABASE=mongodb://seu-banco-de-dados
 #▶️Uso
 
 Para iniciar o servidor em modo desenvolvimento:
+
 npm start
 
 #📌 Endpoints Principais
