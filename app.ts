@@ -98,7 +98,6 @@ if (process.env.NODE_ENV === 'production') {
 
 app.listen(27017,()=>{
 logger.info("Servidor está rodando em http://localhost:27017");
-console.log("server is running in http://localhost:27017")
 });
 
 export default (app);
