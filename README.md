@@ -98,7 +98,9 @@ Parâmetros:
 - cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
 
 exemplo de resposta:
+
 {
+
     "_id": "67c74c193ba0364459c393c6",
     "name": "drogasil",
     "cep": "52070-571",
@@ -109,6 +111,7 @@ exemplo de resposta:
     "latitude": -8.022013203133227,
     "longitude": -34.922386513770135,
     "__v": 0
+    
 }
 
 
