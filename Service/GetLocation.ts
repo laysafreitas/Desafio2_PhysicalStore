@@ -1,7 +1,7 @@
-import { GetViaCep } from "./GetViaCep";
+import { GetViaCep } from "./GetViaCep.ts";
 import { Request,Response } from "express";
-import {haversineDistance} from "../modules/haversineDistance"
-import Loja from "../modules/Lojas";
+import {haversineDistance} from "../modules/haversineDistance.ts"
+import Loja from "../modules/Lojas.ts";
 import  {logger}  from "../app.ts";
 
 export async function GetLocation(

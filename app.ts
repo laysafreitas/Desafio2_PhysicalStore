@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import express,{ Express, Request,Response } from "express";
 import  {GetViaCep} from "./Service/GetViaCep.ts";
-import Loja from "./modules/Lojas";
+import Loja from "./modules/Lojas.ts";
 import router from "./index.ts";
 import winston from "winston";
 
