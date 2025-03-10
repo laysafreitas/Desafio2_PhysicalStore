@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.use('/api', router);
 
+
 export const logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
@@ -33,6 +34,7 @@ export const logger = winston.createLogger({
 if (process.env.NODE_ENV === 'production') {
   logger.remove(new winston.transports.Console());
 }
+
 
   if (!process.env.DATABASE) {
      throw new Error("A variável de ambiente DATABASE não está definida!");
