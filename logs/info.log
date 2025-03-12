@@ -46,3 +46,24 @@
 [2025-03-10 11:39:34] INFO: Servidor está rodando em http://localhost:27017
 [2025-03-10 11:39:35] INFO: DB conectado com sucesso
 [2025-03-10 11:40:19] INFO: Lojas encontradas
+[2025-03-10 12:24:17] INFO: Servidor está rodando em http://localhost:27017
+[2025-03-10 12:24:18] INFO: DB conectado com sucesso
+[2025-03-10 14:41:52] INFO: Servidor está rodando em http://localhost:27017
+[2025-03-10 14:41:55] INFO: DB conectado com sucesso
+[2025-03-10 14:42:00] INFO: Lojas encontradas
+[2025-03-10 14:42:42] INFO: Nenhuma loja encontrada no raio de 100 km
+[2025-03-10 14:44:44] INFO: Loja inserida com sucesso
+[2025-03-10 14:48:13] INFO: Servidor está rodando em http://localhost:27017
+[2025-03-10 14:48:14] INFO: DB conectado com sucesso
+[2025-03-10 14:48:19] ERROR: Não foi possível encontrar as coordenadas do CEP.
+[2025-03-10 14:48:19] ERROR: CEP não encontrado
+[2025-03-10 15:28:13] INFO: Servidor está rodando em http://localhost:27017
+[2025-03-10 15:28:14] INFO: DB conectado com sucesso
+[2025-03-10 15:28:27] INFO: Loja inserida com sucesso
+[2025-03-10 15:28:56] ERROR: Não foi possível encontrar as coordenadas do CEP.
+[2025-03-10 15:28:56] ERROR: CEP não encontrado
+[2025-03-10 15:29:08] INFO: Lojas encontradas
+[2025-03-10 15:29:40] INFO: Nenhuma loja encontrada no raio de 100 km
+[2025-03-10 15:30:40] INFO: Servidor está rodando em http://localhost:27017
+[2025-03-10 15:30:40] INFO: DB conectado com sucesso
+[2025-03-10 15:30:47] INFO: Lojas encontradas
