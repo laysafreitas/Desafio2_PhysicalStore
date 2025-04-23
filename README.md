@@ -1,12 +1,12 @@
 DESAFIO 02 – Desenvolvendo uma Physical Store
 
-#Visão geral:
+# Visão geral:
 
 Physical Store é uma aplicação usando express, desenvolvida em typescript que permite encontrar lojas
 fisicas com um CEP determinado.A API utiliza multiplos serviços de geolocalização para calcular com precisão
 a distancia e rotas entre o endereço do usuario e as lojas cadastradas;
 
-#Principais Funcionalidades
+# Principais Funcionalidades
 
 
 - Cálculo da loja mais próxima com base no CEP do usuário;
@@ -16,7 +16,7 @@ a distancia e rotas entre o endereço do usuario e as lojas cadastradas;
 - Retorno da loja mais próxima e outras lojas dentro de um raio de 100km
 
 
-#📦Requisitos do Sistema
+# 📦Requisitos do Sistema
 
 Tecnologias:typescrip;
 
@@ -40,7 +40,7 @@ O Básico e simples do TS utilizado:
 
 .Mongoose
 
-#Regras da Aplicação:
+# Regras da Aplicação:
 
 O projeto é a criação de um Physical Store que irá conter as lojas de uma determinada loja eCommerce.
 - Para isso você poderá utilizar a API do ViaCEP (https://viacep.com.br/) ao qual irá trazer as informações de endereço das lojas. Você poderá criar quantas lojas achar necessário.
@@ -49,8 +49,9 @@ O projeto é a criação de um Physical Store que irá conter as lojas de uma de
 - Trazer as informações da loja física de forma organizada (Nome da Loja, Rua, Número ...).
 - Deverá ser implementado a geração dos logs, com a utilização do Winston para a geração dos logs em formato json.
 
- #🔧Instalação
- 
+ # 🔧Instalação
+
+ ```bash
  1- Clone este repositório:
  git clone https://github.com/laysafreitas/Desafio2_PhysicalStore.git
 
@@ -62,26 +63,30 @@ npm install
 
 4- compile o projeto:
 npm start
+```
 
-#⚙️Configuração
+# ⚙️Configuração
 
 - Antes de iniciar a aplicação, certifique-se de configurar as variáveis de ambiente corretamente.
   
 - Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
+  
+```env
 
 DATABASE=mongodb://seu-banco-de-dados
 
+```
 
-#▶️Uso
+# ▶️Uso
 
-Para iniciar o servidor em modo desenvolvimento:
+- Para iniciar o servidor em modo desenvolvimento:
 
 npm start
 
 #📌 Endpoints Principais
 
 - POST /lojas - Adiciona uma nova loja:
-
+```post
 {
  "name": string
  "cep": string
@@ -91,7 +96,7 @@ npm start
  "estado": string
  "ddd": string
 }
-
+```
 - GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
   
 Parâmetros:
