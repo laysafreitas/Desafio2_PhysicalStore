@@ -18,11 +18,11 @@ a distancia e rotas entre o endereço do usuario e as lojas cadastradas;
 
 # 📦Requisitos do Sistema
 
-Tecnologias:typescrip;
+- Tecnologias: typescrip;
 
-Desenvolvimento de rotas: Poderá ser usado o Express;
+- Desenvolvimento de rotas: Poderá ser usado o Express;
 
-Banco de dados:mongoDB;
+- Banco de dados:mongoDB;
 
 O Básico e simples do TS utilizado:
 
@@ -83,7 +83,7 @@ DATABASE=mongodb://seu-banco-de-dados
 
 npm start
 
-#📌 Endpoints Principais
+# 📌Endpoints Principais
 
 - POST /lojas - Adiciona uma nova loja:
 ```post
@@ -97,10 +97,10 @@ npm start
  "ddd": string
 }
 ```
-- GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
+ GET /api/cep/:cep - Lista todas as lojas em um raio de 100km
   
-Parâmetros:
-- cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
+- Parâmetros:
+ cep (obrigatório): CEP do usuário no formato 00000000 ou 00000-000
 
 exemplo de resposta:
 
